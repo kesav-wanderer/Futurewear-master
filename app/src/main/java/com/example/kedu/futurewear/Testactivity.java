@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -39,11 +40,9 @@ public class Testactivity extends AppCompatActivity {
         try{
             pds.open();
             ArrayList<Product> productlist =  pds.getproduct(query);
-
-            for(Product product: productlist ){
-                Toast.makeText(Testactivity.this,"hi 123 "+product.getProductid()+" "+product.getProductname(),Toast.LENGTH_LONG).show();
-
-            }
+            Intent newintent = new Intent(Testactivity.this,ImageTextListViewActivity.class);
+            newintent.putExtra("product_list",productlist);
+            startActivity(newintent);
             pds.close();
         }catch (Exception e){
             e.printStackTrace();

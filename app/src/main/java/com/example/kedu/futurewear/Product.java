@@ -1,6 +1,8 @@
 package com.example.kedu.futurewear;
 
-public class Product {
+import java.io.Serializable;
+
+public class Product implements Serializable{
     private  String Description;
     private String Productname;
     private int productid;

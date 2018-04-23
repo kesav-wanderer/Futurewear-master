@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Testactivity"></activity>
+        <activity android:name=".ImageTextListViewActivity"></activity>
     </application>
 
 </manifest>

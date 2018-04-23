@@ -21,7 +21,7 @@ public class ProductDataSource {
 
     public void open() throws SQLException {
         database = dbhelper.getWritableDatabase();
-        insertproduct();
+        //insertproduct();
     }
 
     public void close() {
