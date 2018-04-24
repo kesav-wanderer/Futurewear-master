@@ -25,8 +25,7 @@ public class ImageTextListViewActivity extends Activity implements
 
     public static String[] descriptions = null;
 
-    public static final Integer[] images = { R.drawable.jbl,
-            R.drawable.jbl, R.drawable.jbl, R.drawable.jbl };
+    public static String[] images = null;
 
     ListView listView;
     List<RowItem> rowItems;
@@ -40,9 +39,10 @@ public class ImageTextListViewActivity extends Activity implements
         setContentView(R.layout.productlistview);
         initTitlesArray(product_list);
         initDescArray(product_list);
+        initImagenames(product_list);
 
         rowItems = new ArrayList<RowItem>();
-        for (int i = 0; i < titles.length; i++) {
+        for (int i = 0; i <product_list.size(); i++) {
             RowItem item = new RowItem(images[i], titles[i], descriptions[i]);
             rowItems.add(item);
         }
@@ -62,6 +62,15 @@ public class ImageTextListViewActivity extends Activity implements
         }
     }
 
+    public void initImagenames(ArrayList<Product> product_list){
+        images = new String[product_list.size()];
+        for(int i=0;i< product_list.size();i++){
+
+            images[i] = (product_list.get(i).getProductid());
+        }
+
+    }
+
     public void initDescArray( ArrayList<Product> product_list ){
         descriptions = new String[product_list.size()];
         for(int i=0;i< product_list.size();i++){
@@ -72,10 +81,15 @@ public class ImageTextListViewActivity extends Activity implements
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position,
                             long id) {
-        Toast toast = Toast.makeText(getApplicationContext(),
-                "Item " + (position + 1) + ": " + rowItems.get(position),
-                Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL, 0, 0);
-        toast.show();
+     //   Toast toast = Toast.makeText(getApplicationContext(),
+       //         "Item " + (position + 1) + ": " + rowItems.get(position),
+         //       Toast.LENGTH_SHORT);
+        //toast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL, 0, 0);
+        //toast.show();
+        Intent intent = new Intent(ImageTextListViewActivity.this, Description.class);
+        String imageid = rowItems.get(position).getImageId();
+        intent.putExtra("position",imageid);
+        startActivity(intent);
+
     }
 }

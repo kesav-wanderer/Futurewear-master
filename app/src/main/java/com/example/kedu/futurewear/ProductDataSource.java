@@ -47,7 +47,7 @@ public class ProductDataSource {
             cursor.moveToFirst();
             while (!cursor.isAfterLast()) {
                 product = new Product();
-                product.setProductid(cursor.getInt(0));
+                product.setProductid(cursor.getString(0));
                 product.setProductname(cursor.getString(1));
                 product.setDescription(cursor.getString(2));
                 productlist.add(product);
@@ -59,5 +59,24 @@ public class ProductDataSource {
             e.printStackTrace();
         }
         return productlist;
+    }
+
+    public ArrayList<String> getDescription(String userid){
+            ArrayList<String> descriptions = new ArrayList <String>();
+            String sql = "Select name,description,website from distributor where product_id='"+userid+"'";
+            try{
+                Cursor cursor = database.rawQuery(sql,null);
+                cursor.moveToFirst();
+                while(!cursor.isAfterLast()){
+                    descriptions.add(cursor.getString(0));
+                    descriptions.add(cursor.getString(1));
+                    descriptions.add(cursor.getString(2));
+                    cursor.moveToNext();
+                }
+                cursor.close();
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+            return  descriptions;
     }
 }

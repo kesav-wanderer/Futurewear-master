@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Futurewear-master.iml" filepath="$PROJECT_DIR$/Futurewear-master.iml" />
+      <module fileurl="file://C:\Users\saike\Desktop\Futurewear-master\Futurewear-master.iml" filepath="C:\Users\saike\Desktop\Futurewear-master\Futurewear-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\saike\Desktop\Futurewear-master\app\app.iml" filepath="C:\Users\saike\Desktop\Futurewear-master\app\app.iml" />
     </modules>
   </component>
 </project>

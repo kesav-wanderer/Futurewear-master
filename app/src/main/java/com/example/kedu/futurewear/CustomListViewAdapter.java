@@ -50,7 +50,9 @@ public class CustomListViewAdapter extends ArrayAdapter<RowItem> {
 
         holder.txtDesc.setText(rowItem.getDesc());
         holder.txtTitle.setText(rowItem.getTitle());
-        holder.imageView.setImageResource(rowItem.getImageId());
+        String id = rowItem.getImageId();
+        int resID = context.getResources().getIdentifier(id,"drawable","com.example.kedu.futurewear");
+        holder.imageView.setImageResource(resID);
 
         return convertView;
     }

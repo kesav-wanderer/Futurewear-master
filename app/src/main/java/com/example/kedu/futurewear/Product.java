@@ -5,12 +5,12 @@ import java.io.Serializable;
 public class Product implements Serializable{
     private  String Description;
     private String Productname;
-    private int productid;
-    public int getProductid() {
+    private String productid;
+    public String getProductid() {
         return productid;
     }
 
-    public void setProductid(int productid) {
+    public void setProductid(String  productid) {
         this.productid = productid;
     }
 

@@ -26,4 +26,7 @@
         <item>environmentalimpact</item>
         <item>certifications</item>
     </string-array>
+
+        <string name="info"><u>DEALER INFO</u></string>
+
 </resources>

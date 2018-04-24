@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="horizontal"
+    android:background="@drawable/bg"
+    android:layout_margin="10dp"
+    >
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/desc"
+        android:layout_marginTop="17dp"
+        android:text="@string/info"
+
+        android:textColor="#000000"
+
+        android:textSize="18sp" />
+
+    <ImageView
+
+        android:id="@+id/productimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+
+        android:gravity="center"
+        android:textAlignment="center"/>
+
+
+    <TextView
+        android:id="@+id/distributorname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/productimage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="Distributor Name"
+        android:textColor="#000000"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/distributorname"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:layout_marginRight="2dp"
+        android:inputType="textMultiLine"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView7"
+        android:layout_alignBottom="@+id/textView7"
+
+        android:autoLink="web"
+        android:layout_toRightOf="@+id/textView7"
+        android:layout_marginLeft="15dp"
+        android:ems="10"
+        android:textColor="#0000ff"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView5"
+        android:layout_marginTop="23dp"
+        android:layout_marginLeft="20dp"
+
+        android:text="WEBSITE :"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+</RelativeLayout>
